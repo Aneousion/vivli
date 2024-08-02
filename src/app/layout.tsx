@@ -4,8 +4,8 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
 export const metadata = {
-  title: 'Africa Map',
-  description: 'Interactive Choropleth Map of Africa',
+  title: 'KlebVax',
+  description: 'Vivli hackathon',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
