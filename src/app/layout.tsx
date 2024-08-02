@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 
 export const metadata = {
   title: 'KlebVax',
-  description: 'Vivli hackathon',
+  description: 'Potential Vaccine Candidates for Klebsiella Pneumoniae',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
