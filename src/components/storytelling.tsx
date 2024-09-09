@@ -1,101 +1,76 @@
-'use client'
-
-import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import { Card, CardContent } from "@/components/ui/card"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { ZoomableImage } from './ZoomableImage'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ZoomableImage } from './ZoomableImage';
+import { useTheme } from 'next-themes';
 
 interface StorySection {
-    title: string
-    content: string
-    image: string
+    title: string;
+    content: string;
+    image: string;
 }
 
 const storyData: StorySection[] = [
     {
-        title: "The Beginning",
-        content: "Our journey began with a simple idea: to create something meaningful.",
+        title: "Our Research",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot.png"
     },
     {
-        title: "The Beginning",
-        content: "Our journey began with a simple idea: to create something meaningful.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot01.png"
     },
     {
-        title: "Growth Phase",
-        content: "As we progressed, our project gained traction and started to grow exponentially.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot02.png"
     },
     {
-        title: "Challenges",
-        content: "We faced numerous obstacles, but each one made us stronger and more resilient.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot03.png"
     },
     {
-        title: "Innovation",
-        content: "Through perseverance and creativity, we developed innovative solutions to complex problems.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot04.png"
     },
     {
-        title: "Success",
-        content: "Finally, our hard work paid off, and we achieved the success we had been striving for.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot05.png"
     },
     {
-        title: "Expansion",
-        content: "With our initial success, we began to explore new horizons and expand our reach.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot06.png"
     },
     {
-        title: "New Horizons",
-        content: "As we look to the future, we're excited for the new adventures and challenges that await.",
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
         image: "/Rplot07.png"
     }
 ]
 
 export default function StorytellingComponent() {
-    const [activeSection, setActiveSection] = useState(0)
-    const [selectedImage, setSelectedImage] = useState<string | null>(null)
-    const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
-
-    useEffect(() => {
-        const observers = sectionRefs.current.map((ref, index) => {
-            if (ref) {
-                const observer = new IntersectionObserver(
-                    ([entry]) => {
-                        if (entry.isIntersecting) {
-                            setActiveSection(index)
-                        }
-                    },
-                    { threshold: 0.5 }
-                )
-                observer.observe(ref)
-                return observer
-            }
-            return null
-        })
-
-        return () => {
-            observers.forEach(observer => observer?.disconnect())
-        }
-    }, [])
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const { theme } = useTheme();
 
     return (
         <>
-            <div className="space-y-8">
+            <div className="space-y-8 p-5 pt-7">
                 {storyData.map((section, index) => (
                     <motion.div
                         key={index}
-                        ref={(el) => { sectionRefs.current[index] = el }}
                         initial={{ opacity: 0, y: 50 }}
-                        animate={activeSection === index ? { opacity: 1, y: 0 } : {}}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Card className="shadow-none border-none bg-base-100">
+                        <Card className={`shadow-none border-none ${theme === 'dark' ? 'bg-slate-800 text-gray-200' : 'bg-base-100'}`}>
                             <CardContent className="p-6">
-                                <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
+                                <h2 className="text-2xl font-bold mb-4 col">{section.title}</h2>
                                 <div className="flex flex-col md:flex-row items-center gap-6">
                                     <p className="flex-1">{section.content}</p>
                                     <img
@@ -118,5 +93,5 @@ export default function StorytellingComponent() {
                 </DialogContent>
             </Dialog>
         </>
-    )
+    );
 }

@@ -9,7 +9,7 @@ export default function Hero() {
                         src="/taxi-biotechnology-research.png"
                         className="max-w-sm hue-rotate-240" />
                     <div>
-                        <h1 className="text-5xl font-bold">Welcome to KlebVax!</h1>
+                        <h1 className="text-5xl font-bold">Welcome to Klebvax!</h1>
                         <p className="py-6">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             quasi. In deleniti eaque aut repudiandae et a id nisi.

@@ -25,6 +25,14 @@ body {
   height: 100%;
 }
 
+.bg {
+  background-color: #00D4DC;
+}
+
+.col {
+  color: #00b5bb;
+}
+
 .cta {
   background-color: #00D4DC;
   color: black;

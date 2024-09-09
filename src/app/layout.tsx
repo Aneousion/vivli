@@ -4,7 +4,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
 export const metadata = {
-  title: 'KlebVax',
+  title: 'Klebvax',
   description: 'Potential Vaccine Candidates for Klebsiella Pneumoniae',
 };
 

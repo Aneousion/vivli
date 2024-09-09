@@ -2,13 +2,13 @@ import Link from "next/link"
 export default function Footer() {
     return (
         <>
-            <footer className="footer footer-center bg-primary text-primary-content p-10">
+            <footer className="footer footer-center bg-primary text-primary-content p-4">
                 <aside>
-                    <p className="font-bold">KlebVax.</p>
+                    <p className="font-bold">Klebvax.</p>
                     <nav className="grid grid-flow-col gap-4 font-bold">
                         
                         <br />
-                        <a className="link link-hover">Contact@KlebVax.com</a>
+                        <a className="link link-hover">Contact@Klebvax.com</a>
                         <Link href="/research" className="link link-hover">Research</Link>
                         <Link href="/countries" className="link link-hover">Countries</Link>
                     </nav>
