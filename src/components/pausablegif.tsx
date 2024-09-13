@@ -8,12 +8,12 @@ interface PausableGifProps {
 
 const PausableGif: React.FC<PausableGifProps> = ({ src, alt }) => {
   const [isPaused, setIsPaused] = useState(false);
-  const imgRef = useRef(null);
+  const imgRef: any = useRef(null);
 
   const togglePause = () => {
     setIsPaused(!isPaused);
     if (imgRef.current) {
-      if (isPaused) {
+      if (isPaused) {upda
         imgRef.current.src = imgRef.current.src;
       } else {
         const src = imgRef.current.src;
