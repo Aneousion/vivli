@@ -63,11 +63,42 @@ const storyData: StorySection[] = [
         type: "image"
     },
     {
+        title: "",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis quam nec magna faucibus, vel bibendum magna commodo. Donec sit amet nisl quis nisi tincidunt commodo. Sed vel efficitur ligula. Aenean accumsan magna vel dui rutrum, nec eleifend odio lobortis. Morbi ac arcu ac augue hendrerit iaculis. Cras efficitur lacus ac magna efficitur, at volutpat pede condimentum. Fusce tempus rhoncus tellus, eu finibus mauris finibus eu. Phasellus vestibulum, ipsum vel bibendum facilisis, ipsum magna volutpat enim, vel sodales enim massa vel enim. Praesent vel turpis varius, vulputate magna ut, tempor enim. Aliquam erat volutpat. Donec at facilisis magna. Etiam vitae dolor dolor. Sed vulputate velit in magna lobortis, vel vestibulum ipsum eleifend. Aliquam erat volutpat. Aliquam erat volutpat. Curabitur vel nibh et magna faucibus tristique. Etiam in feugiat magna. Sed efficitur magna vel magna bibendum.",
+        image: "/mdr_pattern_africa.png",
+        type: "image"
+    },
+    {
         title: "Data Visualization",
         content: "This animated chart shows the trend of our key metrics over time...",
-        image: "/chart-animation.gif",
+        image: "/correlation_heatmaps.gif",
         type: "gif"
-    }
+    },
+    {
+        title: "Data Visualization",
+        content: "This animated chart shows the trend of our key metrics over time...",
+        image: "/resistance_by_agegroup.gif",
+        type: "gif"
+    },
+    {
+        title: "Data Visualization",
+        content: "This animated chart shows the trend of our key metrics over time...",
+        image: "/resistance_by_species.gif",
+        type: "gif"
+    },
+    {
+        title: "Data Visualization",
+        content: "This animated chart shows the trend of our key metrics over time...",
+        image: "/species_heatmaps_animation.gif",
+        type: "gif"
+    },
+    {
+        title: "Data Visualization",
+        content: "This animated chart shows the trend of our key metrics over time...",
+        image: "/species_trend.gif",
+        type: "gif"
+    },
+
 ]
 
 export default function StorytellingComponent() {
