@@ -1,8 +1,12 @@
 'use client'
 
 import React, { useState, useRef } from 'react';
+interface PausableGifProps {
+  src: string;
+  alt: string;
+}
 
-const PausableGif = ({ src, alt }) => {
+const PausableGif: React.FC<PausableGifProps> = ({ src, alt }) => {
   const [isPaused, setIsPaused] = useState(false);
   const imgRef = useRef(null);
 
