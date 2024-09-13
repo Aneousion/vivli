@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState, useRef } from 'react';
 interface PausableGifProps {
   src: string;
@@ -13,7 +12,7 @@ const PausableGif: React.FC<PausableGifProps> = ({ src, alt }) => {
   const togglePause = () => {
     setIsPaused(!isPaused);
     if (imgRef.current) {
-      if (isPaused) {upda
+      if (isPaused) {
         imgRef.current.src = imgRef.current.src;
       } else {
         const src = imgRef.current.src;
