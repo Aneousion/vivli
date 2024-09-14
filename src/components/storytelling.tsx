@@ -91,7 +91,8 @@ export default function StorytellingComponent() {
     return (
         <>
             <div className="space-y-8 p-5 pt-7">
-                <h2 className="text-2xl font-bold mb-4 col">Why Develop Vaccines for MDR Pathogens?</h2>
+                <h2 className="text-2xl font-bold mb-4 col">Our Research</h2>
+                <h5 className="text-2xl font-bold mb-4 col">Why Develop Vaccines for MDR Pathogens?</h5>
                 <div className="flex flex-col md:flex-row items-center gap-6 p-6">
                     <p className="flex-1">
                         Antimicrobial resistance (AMR) poses a severe threat to global health, particularly in Africa, where a group of pathogens is responsible for significant morbidity and mortality. The bacteria <em>Enterococcus faecium</em>, <em>Staphylococcus aureus</em>, <em>Klebsiella pneumoniae</em>, <em>Acinetobacter baumannii</em>, <em>Pseudomonas aeruginosa</em>, <em>Enterobacter cloacae</em>, and <em>Escherichia coli</em> (collectively known as ESKAPE-E pathogens) are among the most critical contributors to this burden. These species, listed as global priority pathogens by the WHO, are prevalent in both hospital and community settings, disproportionately affecting vulnerable populations like infants and the immunocompromised.
@@ -102,7 +103,7 @@ export default function StorytellingComponent() {
                     </p>
                 </div>
 
-                <h2 className="text-2xl font-bold mb-4 col">Our Research</h2>
+                
                 {storyData.map((section, index) => (
                     <motion.div
                         key={index}
