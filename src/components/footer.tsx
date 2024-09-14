@@ -8,7 +8,7 @@ export default function Footer() {
                     <nav className="grid grid-flow-col gap-4 font-bold">
                         
                         <br />
-                        <a className="link link-hover">Contact@Kalahari.com</a>
+                        <a className="link link-hover" href="https://github.com/Aneousion/kalahari">GitHub</a>
                         <Link href="/research" className="link link-hover">Research</Link>
                         <Link href="/countries" className="link link-hover">Countries</Link>
                     </nav>
