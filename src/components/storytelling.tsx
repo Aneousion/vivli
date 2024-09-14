@@ -13,24 +13,25 @@ interface StorySection {
 
 const storyData: StorySection[] = [
     {
-        title: "Plots",
-        content: "This chart illustrates the global burden of infection caused by various resistant bacteria. Klebsiella pneumoniae ranks as the fourth highest, following Staphylococcus aureus, Escherichia coli, and Pseudomonas aeruginosa. Its high resistance count underscores its role as a significant threat to global health, with a particularly high infection burden and mortality rate.",
-        image: "/Rplot.png"
+        title: "Multi-Drug Resistance (MDR) Pattern Heatmap",
+        content: "This visualization depicts the MDR pattern of various bacterial species in Africa, showing the percentage of resistance to different antibiotic classes. Notably, Klebsiella pneumoniae and Acinetobacter baumannii exhibit multidrug resistance (MDR) across critical antibiotics, including Carbapenems and Cephalosporins, highlighting serious concerns about treatment options for infections caused by these pathogens.",
+        image: "/mdr_pattern_africa.png"
     },
     {
-        title: "",
-        content: "The chart illustrates the global burden of infection caused by various resistant bacteria. Klebsiella pneumoniae ranks as the fourth highest, following Staphylococcus aureus, Escherichia coli, and Pseudomonas aeruginosa. Its high resistance count underscores its role as a significant threat to global health, with a particularly high infection burden and mortality rate in Europe.",
-        image: "/Rplot01.png"
+        title: "Resistance Trend I (Time-Series)",
+        content: "Based on the ATLAS dataset:\n• Cephalosporins and Fluoroquinolones (green and cyan lines) have consistently high resistance, with a peak around 2008 and a gradual decline, though resistance remains significant.\n• Carbapenems (red line) show relatively lower resistance but a slight upward trend after 2016, indicating growing resistance to these last-line treatments.\n• Sulfonamides (purple line) exhibit the highest resistance across all years, staying above 50% throughout the timeline.\n• Aminoglycosides (blue line) display a sharp increase in resistance after 2016, indicating an alarming rise.\n\nThese trends indicate that Klebsiella pneumoniae is developing increased resistance to multiple antibiotic classes over time, particularly to critical treatments like Carbapenems and Aminoglycosides.",
+        image: "species_trend.gif"
     },
+
     {
-        title: "",
+        title: "Resistance Trend II",
         content: "The chart illustrates the global burden of infection caused by various resistant bacteria. Klebsiella pneumoniae ranks as the third highest, following Staphylococcus aureus and Escherichia coli. Its high resistance count underscores its role as a significant threat to global health, with a particularly high infection burden and mortality rate in Africa.",
         image: "/Rplot02.png"
     },
     {
         title: "",
         content: "The chart illustrates the global distribution of resistance, intermediate, and susceptible phenotypes for various bacterial species. Klebsiella pneumoniae shows a relatively high percentage of resistance, indicating its significant contribution to the global antimicrobial resistance burden. However, it's important to note that other species, such as Staphylococcus aureus and Enterococcus faecium, also exhibit high levels of resistance. This highlights the need for comprehensive strategies to address the growing threat of antimicrobial resistance across multiple bacterial species.",
-        image: "/Rplot03.png"
+        image: "/"
     },
     // More sections...
 ]
