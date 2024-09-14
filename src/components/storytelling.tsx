@@ -17,7 +17,7 @@ const storyData: StorySection[] = [
         content: "This chart illustrates the global burden of infection caused by various resistant bacteria. Klebsiella pneumoniae ranks as the fourth highest, following Staphylococcus aureus, Escherichia coli, and Pseudomonas aeruginosa. Its high resistance count underscores its role as a significant threat to global health, with a particularly high infection burden and mortality rate.",
         image: "/Rplot.png"
     },
-    {
+        {
         title: "",
         content: "The chart illustrates the global burden of infection caused by various resistant bacteria. Klebsiella pneumoniae ranks as the fourth highest, following Staphylococcus aureus, Escherichia coli, and Pseudomonas aeruginosa. Its high resistance count underscores its role as a significant threat to global health, with a particularly high infection burden and mortality rate in Europe.",
         image: "/Rplot01.png"
@@ -81,7 +81,7 @@ const storyData: StorySection[] = [
         title: "",
         content: "These time series charts show resistance trends for various antibiotic classes over the years, offering a visual representation of how resistance to each class has changed across time. Each line represents an antibiotic class, with fluctuations indicating changes in resistance rates. This allows for the monitoring of trends and can highlight which antibiotics are losing efficacy faster. For Africa, these charts highlight the growing problem of resistance in specific drug classes, underscoring the urgency of vaccine development to curb the spread of resistant pathogens. The time-series of Klebsiella pneumoniae reveals a concerning uptrend in resistance rates in recent years, indicating that this pathogen is becoming increasingly difficult to treat with available antibiotics. This is particularly alarming because K. pneumoniae is a common cause of hospital-acquired infections, including pneumonia, bloodstream infections, and urinary tract infections, and it is associated with high morbidity and mortality rates in Africa.",
         image: "/species_trend.gif"
-    }
+    }// ... other storyData sections
 ]
 
 export default function StorytellingComponent() {
@@ -91,6 +91,17 @@ export default function StorytellingComponent() {
     return (
         <>
             <div className="space-y-8 p-5 pt-7">
+                <h2 className="text-2xl font-bold mb-4 col">Why Develop Vaccines for MDR Pathogens?</h2>
+                <div className="flex flex-col md:flex-row items-center gap-6 p-6">
+                    <p className="flex-1">
+                        Antimicrobial resistance (AMR) poses a severe threat to global health, particularly in Africa, where a group of pathogens is responsible for significant morbidity and mortality. The bacteria <em>Enterococcus faecium</em>, <em>Staphylococcus aureus</em>, <em>Klebsiella pneumoniae</em>, <em>Acinetobacter baumannii</em>, <em>Pseudomonas aeruginosa</em>, <em>Enterobacter cloacae</em>, and <em>Escherichia coli</em> (collectively known as ESKAPE-E pathogens) are among the most critical contributors to this burden. These species, listed as global priority pathogens by the WHO, are prevalent in both hospital and community settings, disproportionately affecting vulnerable populations like infants and the immunocompromised.
+                        <br/><br/>
+                        Recent studies, such as Ayobami et al. (2022), emphasize the urgent need for vaccine development targeting these pathogens. Sartorius et al. (2024) revealed that third-generation cephalosporin-resistant <em>Klebsiella pneumoniae</em> and methicillin-resistant <em>Staphylococcus aureus</em> are the most common pathogen-drug combinations driving deaths due to AMR across 25 and 16 African countries, respectively. Combined, these pathogens account for 53% and 34% of AMR-related deaths across 47 African countries.
+                        <br/><br/>
+                        This web application aims to support the development of vaccines for multidrug-resistant (MDR) bacteria and provides a repository of potential vaccine targets, a crucial step towards combating the growing AMR crisis in Africa.
+                    </p>
+                </div>
+
                 <h2 className="text-2xl font-bold mb-4 col">Our Research</h2>
                 {storyData.map((section, index) => (
                     <motion.div
@@ -115,22 +126,15 @@ export default function StorytellingComponent() {
                         </Card>
                     </motion.div>
                 ))}
-                <h2 className="text-2xl font-bold mb-4 col">Justification for Choosing the 10 Bacteria:</h2>
-                <div className="flex flex-col md:flex-row items-center gap-6 p-6">
-                    <p className="flex-1">The 10 bacteria (Enterococcus faecium, Staphylococcus aureus, Klebsiella pneumoniae, Acinetobacter baumannii, Pseudomonas aeruginosa, Enterobacter cloacae, Escherichia coli, Streptococcus pneumoniae, Haemophilus influenzae, Neisseria gonorrhoeae) were chosen due to their significant contribution to the AMR burden in Africa, including species such as Enterococcus faecium, Staphylococcus aureus, Klebsiella pneumoniae, Acinetobacter baumannii, Pseudomonas aeruginosa, Enterobacter cloacae and Escherichia coli (ESKAPE-E) from the WHO’s global priority pathogens list (Ayobami et. al, 2022). These bacteria are responsible for high morbidity and mortality rates due to their resistance to multiple antibiotics, and they are prevalent in hospitals, communities, and vulnerable populations such as infants and immunocompromised individuals.
-                        Sartorius et. al. (2024) revealed that third-generation cephalosporin-resistant Klebsiella pneumoniae and methicillin-resistant Staphylococcus aureus are the most common pathogen-drug combinations causing deaths due to antibiotic resistance in Africa. These combinations were identified in 25 and 16 countries, respectively, accounting for 53% and 34% of the total deaths attributed to AMR across the 47 countries in Africa.
-                    </p>
-                </div>
+
+                <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+                    <DialogContent className="max-w-[90vw] w-full h-[90vh] p-0">
+                        {selectedImage && (
+                            <ZoomableImage src={selectedImage} alt="Full size image" />
+                        )}
+                    </DialogContent>
+                </Dialog>
             </div>
-            <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-                <DialogContent className="max-w-[90vw] w-full h-[90vh] p-0">
-                    {selectedImage && (
-                        <ZoomableImage src={selectedImage} alt="Full size image" />
-                    )}
-                </DialogContent>
-            </Dialog>
-
-
         </>
     );
 }
