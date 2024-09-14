@@ -53,7 +53,7 @@ const storyData: StorySection[] = [
         image: "/Rplot07.png"
     },
     {
-        title: "",
+        title: "<b>Multi-Drug Resistance Heatmap by Species<b>",
         content: "This heatmap presents a matrix of multiple drug-resistant (MDR) patterns by comparing bacterial species and their resistance to various antibiotic classes in Africa. This heatmap provides clear evidence of the most concerning bacterial species in Africa, particularly those that have become resistant to multiple antibiotic classes (A. baumanii  and K. pneumoniae for example). Given Africa’s high burden of MDR bacteria, such visualizations help prioritize species for vaccine research by highlighting those most resistant to diverse drug classes. Focusing vaccine development on these species could reduce the widespread burden of resistant infections across multiple countries.",
         image: "/mdr_pattern_africa.png"
     },
