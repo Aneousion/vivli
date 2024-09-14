@@ -1,5 +1,5 @@
 # Website Link
-Link to the website deployed on Vercel: https://klebvax.vercel.app/
+Link to the website deployed on Vercel: [https://klebvax.vercel.app/](https://thekalahariproject.vercel.app/)
 
 # Packages and Tools
 Packages used for analysis and visualization
