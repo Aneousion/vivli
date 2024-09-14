@@ -99,7 +99,7 @@ export default function StorytellingComponent() {
                         <br/><br/>
                         Recent studies, such as Ayobami et al. (2022), emphasize the urgent need for vaccine development targeting these pathogens. Sartorius et al. (2024) revealed that third-generation cephalosporin-resistant <em>Klebsiella pneumoniae</em> and methicillin-resistant <em>Staphylococcus aureus</em> are the most common pathogen-drug combinations driving deaths due to AMR across 25 and 16 African countries, respectively. Combined, these pathogens account for 53% and 34% of AMR-related deaths across 47 African countries.
                         <br/><br/>
-                        This web application aims to support the development of vaccines for multidrug-resistant (MDR) bacteria and provides a repository of potential vaccine targets, a crucial step towards combating the growing AMR crisis in Africa.
+                        Our work aims to support the development of vaccines for multidrug-resistant (MDR) bacteria and encourages the need for a repository of potential vaccine targets, a crucial step towards combating the growing AMR crisis in Africa.
                     </p>
                 </div>
 
