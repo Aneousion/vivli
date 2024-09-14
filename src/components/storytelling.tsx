@@ -18,14 +18,14 @@ const storyData: StorySection[] = [
         image: "/mdr_pattern_africa.png"
     },
     {
-        title: "Resistance Trend I (Time-Series)",
+        title: "Resistance Trend (Time-Series)",
         content: "Based on the ATLAS dataset:\n\n• Cephalosporins and Fluoroquinolones have consistently high resistance from K. pneumoniae, with a peak around 2008 and a gradual decline, though resistance remains significant.\n\n• Carbapenems show relatively lower resistance but a slight upward trend after 2016, indicating growing resistance to these last-line treatments.\n\n• Sulfonamides exhibit the highest resistance across all years, staying above 50% throughout the timeline.\n\n• Aminoglycosides display a sharp increase in resistance after 2016, indicating an alarming rise.\n\nThese trends indicate that Klebsiella pneumoniae is developing increased resistance to multiple antibiotic classes over time, particularly to critical treatments like Carbapenems and Aminoglycosides.",
         image: "Klebsiella pneumoniae_resistance_trend.png",
         image: "/species_trend.gif"
     },
 
     {
-        title: "Resistance Trend II",
+        title: "Resistance Trend Heatmap",
         content: "The chart illustrates the global burden of infection caused by various resistant bacteria. Klebsiella pneumoniae ranks as the third highest, following Staphylococcus aureus and Escherichia coli. Its high resistance count underscores its role as a significant threat to global health, with a particularly high infection burden and mortality rate in Africa.",
         image: "/Rplot02.png"
     },
