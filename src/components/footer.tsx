@@ -4,11 +4,11 @@ export default function Footer() {
         <>
             <footer className="footer footer-center bg-primary text-primary-content p-4">
                 <aside>
-                    <p className="font-bold">Klebvax.</p>
+                    <p className="font-bold">Kalahari.</p>
                     <nav className="grid grid-flow-col gap-4 font-bold">
                         
                         <br />
-                        <a className="link link-hover">Contact@Klebvax.com</a>
+                        <a className="link link-hover">Contact@Kalahari.com</a>
                         <Link href="/research" className="link link-hover">Research</Link>
                         <Link href="/countries" className="link link-hover">Countries</Link>
                     </nav>

@@ -37,7 +37,7 @@ export default function Navbar(): JSX.Element {
                 </div>
             </div>
             <div className="navbar-center">
-                <a className="btn bg text-2xl text-black">Klebvax.</a>
+                <a className="btn bg text-2xl text-black">Kalahari.</a>
             </div>
             <div className="navbar-end">
                 <label className="swap swap-rotate">

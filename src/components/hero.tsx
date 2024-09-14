@@ -9,7 +9,7 @@ export default function Hero() {
                         src="/taxi-biotechnology-research.png"
                         className="max-w-sm hue-rotate-240" />
                     <div>
-                        <h1 className="text-5xl font-bold">Welcome to Klebvax!</h1>
+                        <h1 className="text-5xl font-bold">Welcome to Kalahari: Klebsiella Antigen Library And Hub for African Research on Immunization!</h1>
                         <p className="py-6">
                             We focus on identifying vaccine targets for Klebsiella pneumoniae, a major contributor to antimicrobial resistance (AMR) in Africa. Using reverse vaccinology and data-driven methods, our research aims to support global efforts in combating AMR.
 
