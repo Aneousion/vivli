@@ -1,3 +1,23 @@
+# Website Link
+Link to the website deployed on Vercel
+
+# Packages and Tools
+Packages used for analysis and visualization
+- pandas==2.2.2
+- seaborn==0.13.2
+- matplotlib==3.9.1
+- plotly==5.22.0
+- plotly.express==0.4.0
+- prokka==1.14.6
+- roary==3.13.0
+- blastp==2.14.0
+- psortdb==4.0.6
+
+# Datasets
+- Pfizer's ATLAS dataset, provided for the project under the 2024 Vivli AMR Open Data Challenge (https://amr.vivli.org/data-challenge/data-challenge-overview/)
+- 2,274 genomes from pathogenwatch
+  
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
